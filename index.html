@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
+ <!--   <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"> -->
+    <link href="assets/css/custom.css" rel="stylesheet" media="screen">
+
 
     <script src="assets/js/jquery-2.0.3.js"></script>
     <script src="assets/js/sketch2.js"></script>
     <script src="assets/js/backbone.js"></script>
+    <script src="assets/js/custom.js"></script>
+
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -38,8 +37,8 @@
     </div>
 
     <div class="container">
-      <div class="tools" style="position:z-index:99;">
-  		<a href="#simple_sketch" data-tool="marker" data-size="5" data-color="#000" data-globalAlpha="1">Marker</a>
+      <div class="tools" style="z-index:99;">
+  		<a href="#simple_sketch" class="selectedTool" data-tool="marker" data-size="5" data-color="#000" data-globalAlpha="1">Marker</a>
   		<a href="#simple_sketch" data-tool="eraser" data-size="15">Eraser</a>
   		<a href="#simple_sketch" data-tool="marker" data-size="15" data-color="#0F0" data-globalAlpha=".3">Highlighter</a>
 
@@ -48,21 +47,16 @@
     	<canvas id="simple_sketch" width="1024" height="768" style="position:fixed;">
     	</canvas>
 
-		<script type="text/javascript">
-		  $(function() {
-		    $('#simple_sketch').sketch();
-		  });
-		</script>
-
-      <h1>Question 1: What is my favorite animal?</h1>
-
-      <ul>
-      <li>Cat</li>
-      <li>Dog</li>
-      <li>Bird</li>
-      <li>The Tokay Gecko!</li>
-      </ul>
-
+      <section class="questionContent">
+        <h3 class="question">Question 1: A business printed 225 books on Friday. Each book had 350 pages. How many pages did the business print on Friday?</h3>
+        
+        <ol class="choices">
+          <li><input type="radio" name="q1" class="choice" />78,750</li>  
+          <li><input type="radio" name="q1" class="choice" />76,550</li>
+          <li><input type="radio" name="q1" class="choice" />1,700</li>
+          <li><input type="radio" name="q1" class="choice" />575</li>
+        </ol>
+      </section>
     </div> <!-- /container -->
   </body>
 </html>
