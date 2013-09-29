@@ -8,8 +8,8 @@ body {
 
 
 .questionContent {
-	width: 960px;
-	margin: auto 0;
+	width: 930px;
+	margin: 0 auto;
 }
 
 .choices {
@@ -21,7 +21,7 @@ body {
 	font-size: 22px;
 }
 
-.choice {
+.choice, .nextQ {
 	position: relative;
 	display: inline;
 	z-index: 99;
